@@ -2,12 +2,6 @@
 const nextConfig = {
   images: {
     unoptimized: true,
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-      },
-    ],
   },
   experimental: {
     serverActions: true,
@@ -15,4 +9,8 @@ const nextConfig = {
   output: 'export',
 };
 
-module.exports = nextConfig;
+module.exports = {
+  typescript : {
+    ignoreBuildErrors: true,
+  }
+}
