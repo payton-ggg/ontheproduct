@@ -15,7 +15,7 @@ type ThemeContextType = {
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
-export default function ThemeContextProvider({
+export default function ThemeContextProviders({
   children,
 }: ThemeContextProviderProps) {
   const [theme, setTheme] = useState<Theme>("light");
@@ -58,7 +58,7 @@ export default function ThemeContextProvider({
   );
 }
 
-export function useTheme() {
+export function useThemes() {
   const context = useContext(ThemeContext);
 
   if (context === null) {
