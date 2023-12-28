@@ -63,9 +63,9 @@ export default function Home() {
       <TwiceTitle />
       <TAbout />
       {/* <Projects /> */}
-      <Skills />
       <ThirdTitle />
       <Portfolio />
+      <Skills />
       <PricingCard />
       <Faqs />
       {/* <Contact /> */}

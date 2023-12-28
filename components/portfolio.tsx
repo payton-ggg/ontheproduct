@@ -12,7 +12,7 @@ export default function Portfolio() {
   return (
     <motion.section
       ref={ref}
-      className="max-w-[1000px] mb-[72px]"
+      className="max-w-[1000px] mb-[190px]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}

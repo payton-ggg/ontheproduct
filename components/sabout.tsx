@@ -1,5 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Graph from "@/public/graph.svg"
+import Thunder from "@/public/thunder.svg"
+import Cash from "@/public/cash.svg"
+import Pause from "@/public/pause.svg"
+import Diamond from "@/public/diamond.svg"
+import Drop from "@/public/water.svg"
 
 export default function SAbout() { 
     return (
@@ -15,7 +22,7 @@ export default function SAbout() {
                 <div className="self-stretch mt-20 max-md:max-w-full max-md:mt-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
                         <div className="flex flex-col items-stretch w-[59%] max-md:w-full max-md:ml-0">
-                            <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full pl-10 pr-7 py-12 rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-3.5 max-md:px-5">
+                            <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full pl-10 pr-7 pt-[30px] rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-3.5 max-md:px-5">
                                 <div className="text-2xl-m font-bold max-md:max-w-full text-left">
                                     <span className="">
                                         “Without needing detailed briefs, <span className="text-blue-600">OnTheProduct</span> delivered
@@ -70,13 +77,22 @@ export default function SAbout() {
 
 export function TAbout() {
     return (
-        <motion.section>
+        <motion.section
+            className="mb-32"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.175 }}
+        >
             <div className="self-stretch ml-8 mr-9 mt-14 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next">
                 <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch-950">
                     <div className="flex flex-col items-stretch w-[33%] max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto shadow-lg">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            📊
+                        <Image 
+                            src={Graph}
+                            alt="Diamond"
+                            quality={95}
+                        />
                         </div>
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Design Board
@@ -87,9 +103,13 @@ export function TAbout() {
                     </div>
                     </div>{" "}
                     <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto shadow-lg">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            ⚡
+                        <Image 
+                            src={Thunder}
+                            alt="Diamond"
+                            quality={95}
+                        />
                         </div>{" "}
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Instant Delivery
@@ -100,9 +120,13 @@ export function TAbout() {
                     </div>
                     </div>
                     <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto shadow-lg">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            💵
+                        <Image 
+                            src={Cash}
+                            alt="Diamond"
+                            quality={95}
+                        />
                         </div>
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Fixed Fee
@@ -117,9 +141,13 @@ export function TAbout() {
             <div className="self-stretch ml-8 mr-9 mt-8 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next mb-[107px]">
                 <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch-950">
                     <div className="flex flex-col items-stretch w-[33%] max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            ⏸️
+                        <Image 
+                            src={Pause}
+                            alt="Pause"
+                            quality={95}
+                        />
                         </div>
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Pause at any time
@@ -130,9 +158,13 @@ export function TAbout() {
                     </div>
                     </div>{" "}
                     <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            💎
+                        <Image 
+                            src={Diamond}
+                            alt="Diamond"
+                            quality={95}
+                        />
                         </div>{" "}
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Uniqueness
@@ -143,9 +175,13 @@ export function TAbout() {
                     </div>
                     </div>
                     <div className="flex flex-col items-stretch w-[33%] ml-5 max-md:w-full-950 max-md-real:ml-0">
-                        <div className="border shadow-sm backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5">
+                        <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto">
                         <div className="text-black text-7xl whitespace-nowrap max-md:text-4xl">
-                            💧
+                        <Image 
+                            src={Drop}
+                            alt="Diamond"
+                            quality={95}
+                        />
                         </div>
                         <div className="text-black text-4xl font-bold self-stretch whitespace-nowrap mt-4">
                             Flexible plan

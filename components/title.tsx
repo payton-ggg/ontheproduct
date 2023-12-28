@@ -22,7 +22,7 @@ export default function OnceTitle() {
 export function FirstTitle() {
     return (
         <motion.div
-        className="max-w-[644px] text-center leading-8 mb-10 scroll-mt-28 max-md-950:max-w-full mt-20"
+        className="max-w-[644px] text-center leading-8 mb-10 scroll-mt-28 max-md-950:max-w-full mt-[200px]"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.175 }}

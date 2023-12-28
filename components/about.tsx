@@ -104,7 +104,7 @@ export default function About() {
 
 export function LogoExample() {
   return (
-    <motion.div className="mt-[-20%]">
+    <motion.div className="mt-[-17%]">
       <div className="bg-white opacity-20 flex items-stretch justify-between gap-5 px-5 pb-10 py-10 max-md:max-w-full w-auto max-md:flex-wrap">
         <div className="text-black text-center text-xl font-bold">
           Logo Example

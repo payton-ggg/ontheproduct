@@ -8,7 +8,7 @@ export default function Faqs() {
   return (
     <motion.div
       ref={ref}
-      className="mb-28 text-center leading-8 sm:mb-40 scroll-mt-[4rem]"
+      className="mb-20 text-center leading-8 sm:mb-20 scroll-mt-[4rem]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
@@ -20,7 +20,7 @@ export default function Faqs() {
         FAQs
       </div>
         
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer">Why would I use your services when I can just hire a full-time designer? </label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -31,7 +31,7 @@ export default function Faqs() {
           </div>
         </div>
         
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-2" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-2">How do I make a design request?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -42,7 +42,7 @@ export default function Faqs() {
           </div>
         </div>
         
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-3" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-3">Is there a limit to the number of requests I can receive?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -53,7 +53,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-4" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-4">How quickly will I receive my designs?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -64,7 +64,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-5" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-5">How does the pause feature work?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -75,7 +75,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-6" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-6">I only have one request, does it make sense for me to purchase a subscription??</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -86,7 +86,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-7" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-7">What if I don't like the design?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -97,7 +97,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-8" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-8">Can I get a refund if I don't like your services?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
@@ -108,7 +108,7 @@ export default function Faqs() {
           </div>
         </div>
 
-        <div className="faq-drawer">
+        <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7">
           <input className="faq-drawer__trigger" id="faq-drawer-9" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer-9">What programs do you do the design in?</label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">
