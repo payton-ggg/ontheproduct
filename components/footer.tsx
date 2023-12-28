@@ -110,8 +110,6 @@ export default function Footer() {
       </section>
 
       </footer>
-
-      <p className="text-align:center; margin: 30px 0">The adaptive breakpoint here is at 960px.</p>
     </motion.div>
   );
 }
