@@ -1,0 +1,4 @@
+git add .
+git commit -m "for github"
+git remote add origin https://github.com/payton-ggg/just-my-thoughts.git
+git push -u origin main
