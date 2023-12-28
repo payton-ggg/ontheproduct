@@ -38,9 +38,9 @@ export default function Home() {
     <main className="flex flex-col items-center">
       <Intro />
       <MainStyled>
-        <SectionLayout>
-          <HorizontalWrapper height="5rem" direction={-1500}>
-            <div className="cards">
+      <SectionLayout>
+          <HorizontalWrapper height="30rem" direction={-500}>
+            <div className="cards" style={{ right: 0 }}>
               {cards.map((card, index) => {
                 return (
                   <Card
@@ -82,5 +82,16 @@ const MainStyled = styled.main`
     display: grid;
     grid-template-columns: repeat(4, 30rem);
     gap: 1rem;
+  }
+
+  .video {
+    padding: 2rem;
+    background-color: #161616;
+    border-radius: 1rem;
+    iframe {
+      border: none;
+      width: 100%;
+      height: 52rem;
+    }
   }
 `;

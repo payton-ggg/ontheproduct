@@ -11,17 +11,14 @@ import Drop from "@/public/water.svg"
 export default function SAbout() { 
     return (
         <motion.section
-            className="mb-[72px] text-center sm:mb-40 scroll-mt-28 leading-[1px]"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.175 }}
+            className="mb-[72px] text-center sm:mb-32 scroll-mt-14 leading-[1px]"
         >
             <motion.div
                 className="max-w-[1100px] text-2xl-m"
             >
                 <div className="self-stretch mt-20 max-md:max-w-full max-md:mt-10">
                     <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-                        <div className="flex flex-col items-stretch w-[59%] max-md:w-full max-md:ml-0">
+                        <div className="flex flex-col items-stretch w-[59%] max-md:w-full max-md:ml-0" data-aos="fade-right">
                             <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full pl-10 pr-7 pt-[30px] rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-3.5 max-md:px-5">
                                 <div className="text-2xl-m font-bold max-md:max-w-full text-left">
                                     <span className="text-black">
@@ -37,34 +34,34 @@ export default function SAbout() {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-stretch w-[41%] ml-5 max-md:w-full max-md:ml-0">
+                        <div className="flex flex-col items-stretch w-[41%] ml-5 max-md:w-full max-md:ml-0" data-aos="fade-down">
                             <div className="flex grow flex-col items-stretch max-md:max-w-full max-md:mt-3.5 text-left">
                                 <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-stretch px-3 py-3 rounded-2xl border-solid border-white max-md:max-w-full">
-                                <div className="text-black text-2xl-m font-bold">
-                                    Completely flexible
-                                </div>
-                                <div className="text-black text-lg mt-3.5">
-                                    Not a fan of meetings? Neither are we so we've banned them
-                                    altogether.
-                                </div>
+                                    <div className="text-black text-2xl-m font-bold">
+                                        Completely flexible
+                                    </div>
+                                    <div className="text-black text-lg mt-3.5">
+                                        Not a fan of meetings? Neither are we so we've banned them
+                                        altogether.
+                                    </div>
                                 </div>{" "}
                                 <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-stretch mt-6 px-3 py-3 rounded-2xl border-solid border-white max-md:max-w-full">
-                                <div className="text-black text-2xl-m font-bold">
-                                    Organize with Trello
-                                </div>{" "}
-                                <div className="text-black text-lg mt-3.5">
-                                    Keep your design projects in check using Trello. Easily see
-                                    what's in progress, queued, or done.
-                                </div>
+                                    <div className="text-black text-2xl-m font-bold">
+                                        Organize with Trello
+                                    </div>{" "}
+                                    <div className="text-black text-lg mt-3.5">
+                                        Keep your design projects in check using Trello. Easily see
+                                        what's in progress, queued, or done.
+                                    </div>
                                 </div>
                                 <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-stretch mt-6 px-3 py-3 rounded-2xl border-solid border-white max-md:max-w-full max-md:pr-5">
-                                <div className="text-black text-2xl-m font-bold">
-                                    Bring on the whole team
-                                </div>
-                                <div className="text-black text-lg mt-3.5">
-                                    Not a fan of meetings? Neither are we so we've banned them
-                                    altogether.
-                                </div>
+                                    <div className="text-black text-2xl-m font-bold">
+                                        Bring on the whole team
+                                    </div>
+                                    <div className="text-black text-lg mt-3.5">
+                                        Not a fan of meetings? Neither are we so we've banned them
+                                        altogether.
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -79,11 +76,8 @@ export function TAbout() {
     return (
         <motion.section
             className="mb-32"
-            initial={{ opacity: 0, y: 100 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.175 }}
         >
-            <div className="self-stretch ml-8 mr-9 mt-14 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next">
+            <div className="self-stretch ml-8 mr-9 mt-14 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next" data-aos="fade-down">
                 <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch-950">
                     <div className="flex flex-col items-stretch w-[33%] max-md:w-full-950 max-md-real:ml-0">
                         <div className="border backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto shadow-lg">
@@ -138,7 +132,7 @@ export function TAbout() {
                     </div>
                 </div>
             </div>
-            <div className="self-stretch ml-8 mr-9 mt-8 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next mb-[107px]">
+            <div className="self-stretch ml-8 mr-9 mt-8 max-w-[1200px] max-md:mr-2.5 max-md:mt-10 max-md:max-w-full-next mb-[107px]" data-aos="fade-up">
                 <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch-950">
                     <div className="flex flex-col items-stretch w-[33%] max-md:w-full-950 max-md-real:ml-0">
                         <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex flex-col items-center pl-7 pr-8 pt-5 pb-10 rounded-2xl border-solid border-white max-md:px-5 h-[300px] max-md:h-auto">

@@ -12,14 +12,11 @@ const PricingCard = () => {
       <motion.section
         ref={ref}
         className="section-card scroll-mt-[1rem]"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.175 }}
         id="pricing"
       >
       <div className="self-stretch mt-20 mx-7 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
         <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-          <div className="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0">
+          <div className="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0" data-aos="zoom-out-right">
             <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col w-full px-8 py-8 rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-10 max-md:px-5">
               <div className="text-black text-3xl self-stretch">
                 <span className="font-bold text-4xl">Standard</span>
@@ -60,7 +57,7 @@ const PricingCard = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[49%] ml-5 max-md:w-full max-md:ml-0">
+          <div className="flex flex-col items-stretch w-[49%] ml-5 max-md:w-full max-md:ml-0" data-aos="zoom-out-left">
             <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full py-8 rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-10">
               <div className="flex flex-col pl-9 pr-12 max-md:max-w-full max-md:px-5">
                 <div className="text-black text-3xl self-stretch">

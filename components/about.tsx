@@ -16,20 +16,14 @@ export default function About() {
     <motion.section
       ref={ref}
       className="mb-28 text-center max-w-[900px] leading-8 sm:mb-40 scroll-mt-28"
-      initial={{ opacity: 0, y: 100 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.175 }}
       id="about"
     >
       
       <motion.div
         className="text-center leading-8 mb-40 scroll-mt-28"
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.175 }}
       >
         <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch max-md:gap-0">
-          <div className="flex flex-col items-stretch w-[31%] max-md:w-full-next max-md:ml-0">
+          <div className="flex flex-col items-stretch w-[31%] max-md:w-full-next max-md:ml-0" data-aos="fade-up-right">
             <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-stretch w-full px-4 py-12 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
               <div className="text-black text-center text-8xl font-bold self-center whitespace-nowrap max-md:text-4xl">
                 <Image 
@@ -46,7 +40,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0">
+          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0" data-aos="fade-up">
             <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-stretch w-full px-4 py-12 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
               <div className="text-black text-center text-8xl font-bold self-center whitespace-nowrap max-md:text-4xl">
                 <Image 
@@ -64,7 +58,7 @@ export default function About() {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0">
+          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0" data-aos="fade-up-left">
             <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-center w-full py-12 px-4 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
               <div className="text-black text-center text-8xl font-bold whitespace-nowrap max-md:text-4xl">
                 <Image 
@@ -84,12 +78,8 @@ export default function About() {
           </div>
         </div>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.175 }}
-      >
-        <div className="h-auto bg-white bg-opacity-20 rounded-2xl bit-shadow border border-white backdrop-blur-sm tracking-tight">
+      <motion.div>
+        <div className="h-auto bg-white bg-opacity-20 rounded-2xl bit-shadow border border-white backdrop-blur-sm tracking-tight" data-aos="zoom-out">
           <div className="max-w-[800px] pt-[30px] pl-[27px] text-left leading-[1px]">
             <span className="text-black text-xl font-bold ">“We highly endorse </span><span className="text-blue-600 text-xl font-bold ">OnTheProduct</span><span className="text-black text-xl font-bold "> for exceptional graphic design services. Their team has consistently impressed us with their creative flair, meticulous attention to detail, and unwavering commitment to embodying our brand's vision.”</span>
           </div>
