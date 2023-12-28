@@ -24,7 +24,7 @@ export default function SAbout() {
                         <div className="flex flex-col items-stretch w-[59%] max-md:w-full max-md:ml-0">
                             <div className="border bit-shadow backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full pl-10 pr-7 pt-[30px] rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-3.5 max-md:px-5">
                                 <div className="text-2xl-m font-bold max-md:max-w-full text-left">
-                                    <span className="">
+                                    <span className="text-black">
                                         “Without needing detailed briefs, <span className="text-blue-600">OnTheProduct</span> delivered
                                         top-notch results, demonstrating remarkable self-direction and
                                         initiative. Design team was a breeze to communicate with, always

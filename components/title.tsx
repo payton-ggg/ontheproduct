@@ -54,8 +54,8 @@ export function TwiceTitle() {
 export function ThirdTitle() {
     return (
         <motion.div>
-            <div className="text-center text-black dark:text-white text-4xl font-bold monsr mb-3">Recent Work</div>
-            <div className="text-center text-black dark:text-white text-2xl font-normal nokora">
+            <div className="text-center text-black text-4xl font-bold monsr mb-3">Recent Work</div>
+            <div className="text-center text-black text-2xl font-normal nokora">
             Recent wins with designs boosting sales.
             </div> 
         </motion.div>
