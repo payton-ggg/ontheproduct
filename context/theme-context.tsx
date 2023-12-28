@@ -9,7 +9,7 @@ type ThemeContextProviderProps = {
 };
 
 type ThemeContextType = {
-  theme: "light";
+  theme: Theme;
   toggleTheme: () => void;
 };
 
@@ -22,13 +22,12 @@ export default function ThemeContextProvider({
 
   const toggleTheme = () => {
     if (theme === "light") {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.add("light");
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
     } else {
       setTheme("light");
       window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("light");
+      document.documentElement.classList.remove("dark");
     }
   };
 
