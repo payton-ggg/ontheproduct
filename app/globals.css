@@ -459,7 +459,7 @@
 
 
 .container {
- padding: 200px;
+ padding: 100px;
 }
 
 .faq-drawer {
@@ -510,7 +510,7 @@
 .faq-drawer__trigger:checked
   + .faq-drawer__title
   + .faq-drawer__content-wrapper {
-  max-height: 350px;
+  max-height: 550px;
 }
 
 .faq-drawer__trigger:checked + .faq-drawer__title::after {
@@ -564,6 +564,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5em;
+}
+
+@media (max-width: 1000px) {
+  .card-1000\:gap {
+    gap: 2.5em;
+  }
 }
 
 .card {

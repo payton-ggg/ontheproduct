@@ -13,7 +13,7 @@ export default function OnceTitle() {
 
     return (
         <motion.div
-            className="max-w-[644px]"
+            className="max-w-[644px] mx-2"
             data-aos="fade-up"
         >
             <div className="text-center text-black text-4xl font-bold monsr">
@@ -29,7 +29,7 @@ export default function OnceTitle() {
 export function FirstTitle() {
     return (
         <motion.div
-        className="max-w-[644px] text-center leading-8 mb-10 scroll-mt-28 max-md-950:max-w-full mt-[200px]"
+        className="max-w-[644px] mx-2 text-center leading-8 mb-10 scroll-mt-28 max-md-950:max-w-full mt-[-500px]"
         id="about"
         data-aos="fade-up"
         >
@@ -47,6 +47,7 @@ export function TwiceTitle() {
     return (
         <motion.div
            data-aos="fade-up"
+           className="mx-1"
         >
             <div className="text-black text-center text-4xl font-bold self-center mt-28 max-md:max-w-full max-md:mt-10">
                 Your membership perks
@@ -61,7 +62,7 @@ export function TwiceTitle() {
 export function ThirdTitle() {
     return (
         <motion.div
-            data-aos="zoom-out"
+            data-aos="zoom-in"
         >
             <div className="text-center text-black text-4xl font-bold monsr mb-3">
                 Recent Work

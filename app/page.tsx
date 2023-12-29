@@ -39,7 +39,7 @@ export default function Home() {
       <Intro />
       <MainStyled>
       <SectionLayout>
-          <HorizontalWrapper height="30rem" direction={-500}>
+          <HorizontalWrapper height="60rem" direction={-500}>
             <div className="cards" style={{ right: 0 }}>
               {cards.map((card, index) => {
                 return (
@@ -55,7 +55,7 @@ export default function Home() {
           </HorizontalWrapper>
         </SectionLayout>
       </MainStyled>
-      <LogoExample />
+      {/* <LogoExample /> */}
       <FirstTitle />
       <About />
       <OnceTitle />

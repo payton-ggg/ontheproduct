@@ -18,7 +18,7 @@ export default function Faqs() {
       </div>
         
         <div className="faq-drawer bg-white bg-opacity-20 rounded-2xl shadow-lg border border-white pb-7" data-aos="fade-up"
-     data-aos-duration="1000">
+        data-aos-duration="1000">
           <input className="faq-drawer__trigger" id="faq-drawer" type="checkbox" /><label className="faq-drawer__title" htmlFor="faq-drawer">Why would I use your services when I can just hire a full-time designer? </label>
           <div className="faq-drawer__content-wrapper">
             <div className="faq-drawer__content">

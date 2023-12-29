@@ -12,7 +12,7 @@ export default function Portfolio() {
   return (
     <motion.section
       ref={ref}
-      className="max-w-[1000px] mb-[190px]"
+      className="max-w-[1000px] mb-[190px] mx-5"
       id="portfolio"
     >
       <div className="self-stretch ml-5 mt-11 max-md:max-w-full max-md:mr-1.5 max-md:mt-10">
