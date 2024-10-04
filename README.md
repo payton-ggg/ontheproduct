@@ -2,7 +2,6 @@
 
 Welcome to **ontheproduct**, a designer studio where innovative ideas come to life! We craft stunning, user-friendly digital products that don't just look good but also work seamlessly. Let's turn your vision into reality, one pixel at a time! ✨
 
----
 
 ## 🖌️ **What We Do**
 
@@ -13,7 +12,6 @@ At **ontheproduct**, we specialize in:
 - **Brand Identity** – Building memorable brands that stand out. 🎯
 - **Prototyping** – Bringing ideas to life with interactive prototypes. 🚀
 
----
 
 ## 🤝 **Our Philosophy**
 
@@ -23,7 +21,6 @@ We believe in:
 - **Collaboration**: Great products are made together. Let's join forces! 🤝
 - **Functionality**: Design is not just about looks; it's about how things work. ⚙️
 
----
 
 ## 💼 **Our Services**
 
@@ -36,12 +33,11 @@ From logos to full brand guidelines, we craft identities that tell your story an
 🛠️ **Prototyping & Development**  
 We don’t just design – we build! Using the latest tools, we bring your designs to life with high-fidelity prototypes. 🎯
 
----
 
 ## 💬 **Get in Touch**
 
 Let’s create something amazing together!  
-📧 **Email**: hello@ontheproduct.com  
+📧 **telegram**: ontheproduct  
 🌐 **Website**: [ontheproduct.com](https://ontheproduct.com)  
 📱 **Social**: Follow us on [Instagram](https://instagram.com/ontheproduct) and [LinkedIn](https://linkedin.com/company/ontheproduct) for more updates!
 
