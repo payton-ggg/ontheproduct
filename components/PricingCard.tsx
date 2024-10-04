@@ -3,7 +3,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import PayButton from "./PayButton";
 
 const PricingCard: React.FC = () => {

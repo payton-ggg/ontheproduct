@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense } from "react";
+import React from "react";
 import HorizontalWrapper from "@/components/HorizontalWrapper";
 import SectionLayout from "@/components/SectionLayout";
 import { cards } from "@/actions/cards";
@@ -8,8 +8,7 @@ import Card from "@/components/cards";
 import Intro from "@/components/intro";
 import Skills from "@/components/skills";
 import PricingCard from "@/components/PricingCard";
-import { TAbout } from "@/components/sabout";
-import { ThirdTitle, TwiceTitle } from "@/components/title";
+import { TwiceTitle } from "@/components/title";
 import Faqs from "@/components/faqs";
 import Integration from "@/components/interg";
 import ImageS, { PortfolioCub } from "@/components/image";
@@ -44,14 +43,10 @@ export default function Home() {
       <EndBack />
       <TwiceTitle />
       <FeatureGrid />
-      <ThirdTitle />
-      <Suspense fallback={<p>Loading...</p>}>
-        <PortfolioCub />
-      </Suspense>
+      <PortfolioCub />
       <Skills />
       <PricingCard />
       <Faqs />
-      {/* <Contact /> */}
     </main>
   );
 }
