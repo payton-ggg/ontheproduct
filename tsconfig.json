@@ -9,7 +9,7 @@
     "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -23,6 +23,18 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/PricingCard.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/PricingCard.tsx",
+    "actions/paypal.ts",
+    "app/api/checkout/route.js",
+    "components/side/toggleButton/ToggleButton.jsx",
+    "components/side/links/Links.jsx",
+    "components/side/SideBar.jsx",
+    "components/image.tsx"
+  ],
   "exclude": ["node_modules"]
 }

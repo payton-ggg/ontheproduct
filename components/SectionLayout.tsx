@@ -11,6 +11,7 @@ function SectionLayout({ children, ref }: SectionLayoutProps) {
       style={{
         padding: "5rem 10rem",
       }}
+      className="body-for-card"
     >
       {children}
     </section>

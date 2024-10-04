@@ -16,8 +16,7 @@ function Card({ title, description, image }: CardProps) {
       <div
         className="image"
         style={{
-          height: "100%",
-          width: "100%",
+          width: "70%",
         }}
       >
         <div className="text">
@@ -37,6 +36,7 @@ function Card({ title, description, image }: CardProps) {
           }}
         />
       </div>
+      <div className="overlay"></div>
     </CardStyled>
   );
 }
@@ -45,7 +45,6 @@ const CardStyled = styled.div`
   position: relative;
   background-color: var(--color-bg);
   height: 100%;
-  padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid var(--color-border);
   transition: all 0.3s ease-in-out;
@@ -53,7 +52,7 @@ const CardStyled = styled.div`
   .new {
     position: absolute;
     top: 3rem;
-    right: 0.5rem;
+    right: 2.5rem;
     z-index: 5;
     background: #222260;
     color: #fff;
@@ -87,7 +86,6 @@ const CardStyled = styled.div`
     left: -2px;
     width: calc(100% + 4px);
     height: 25%;
-    background: linear-gradient(0deg, #111111 1%, rgba(17, 17, 17, 0.06) 99%);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
   }

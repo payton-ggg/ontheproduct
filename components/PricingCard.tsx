@@ -1,109 +1,127 @@
 "use client";
-import React from 'react'
+import React from "react";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
-import { useActiveSectionContext } from '@/context/active-section-context';
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import PayButton from "./PayButton";
 
-const PricingCard = () => {
+const PricingCard: React.FC = () => {
   const { ref } = useSectionInView("Pricing");
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-      <motion.section
-        ref={ref}
-        className="section-card scroll-mt-[1rem]"
-        id="pricing"
-      >
-      <div className="self-stretch mt-20 mx-5 max-md:max-w-full max-md:mr-2.5 max-md:mt-10">
-        <div className="gap-5 flex max-md:flex-col max-md:items-stretch max-md:gap-0">
-          <div className="flex flex-col items-stretch w-[49%] max-md:w-full max-md:ml-0" data-aos="zoom-in">
-            <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col w-full px-8 py-8 rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-10 max-md:px-5">
-              <div className="text-black text-3xl self-stretch">
-                <span className="font-bold text-4xl">Standard</span>
+    <motion.section ref={ref} id="pricing">
+      <div className="flex flex-col max-w-[864px]">
+        <div className="flex flex-wrap gap-10 items-start">
+          <div className="flex overflow-hidden flex-col justify-center p-8 border border-solid bg-neutral-900 border-amber-800 border-opacity-0 min-w-[240px] rounded-[50px] w-[412px] max-md:px-5">
+            <div className="flex flex-col justify-center px-4 w-full">
+              <div className="flex flex-col justify-center items-start w-full">
+                <div className="flex flex-col justify-center">
+                  <div className="gap-2 self-start text-3xl font-semibold leading-snug text-center whitespace-nowrap text-neutral-200">
+                    Standart
+                  </div>
+                  <div className="text-base leading-7 text-zinc-400">
+                    One request at the time
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center mt-2.5">
+                  <div className="text-3xl font-semibold leading-snug bg-clip-text text-orange-500">
+                    3500$/m
+                  </div>
+                  <div className="text-base leading-7 text-zinc-400">
+                    Pause or Cancel anytime
+                  </div>
+                </div>
               </div>
-              <div className="text-black text-3xl self-stretch">
-                <span className="text-lg text-gray-400">
-                  One request at a time. Pause or cancel <br /> anytime.
+              <div className="flex flex-col justify-center mt-2.5 w-full text-base leading-7 text-center">
+                <div className="flex flex-col justify-center w-full text-neutral-200">
+                  <a href="/checkout.html">
+                    <div className="overflow-hidden gap-3 self-stretch px-6 py-3 w-full border border-orange-500 border-solid bg-neutral-900 rounded-[50px] max-md:px-5">
+                      Buy it with paypal
+                    </div>
+                  </a>
+                  <a href="https://t.me/ontheproduct">
+                    <div className="overflow-hidden gap-3 self-stretch px-6 py-3 mt-4 w-full border border-solid bg-neutral-900 border-neutral-800 rounded-[50px] max-md:px-5">
+                      Buy it in crypto
+                    </div>
+                  </a>
+                </div>
+                <div className="self-center mt-2 bg-clip-text text-orange-500">
+                  Book a call
+                </div>
+              </div>
+              <div className="mt-2.5 text-base leading-7 text-neutral-200">
+                <span className="text-lg font-medium leading-8">
+                  What's included:
                 </span>
-              </div>
-              <div className="text-black text-4xl font-bold self-stretch mt-7">
-                3499$/m
-              </div>
-              <div className="text-gray-400 text-lg self-stretch mt-2">
-                Pause or Cancel anytime
-              </div>
-              <a href="https://buy.stripe.com/test_aEU5kMew35jtgqAbII">
-                <div className="text-white text-center text-xl font-bold bg-black self-stretch justify-center items-center mt-6 px-16 py-7 rounded-2xl max-md:px-5">
-                  Try it
-                </div>
-              </a>
-              <div className="text-black text-lg self-center whitespace-nowrap mt-3">
-                Book a Call
-              </div>
-              <div className="text-black text-xl self-stretch mt-5 mb-3.5">
-                <div>
-                  <span className="text-black text-lg font-bold">
-                    What's included:<br/>
-                  </span>
-                  <ul className="text-black text-lg font-normal list-disc ml-5">
-                      <li>One request at a time</li>
-                      <li>Average 36 hour delivery</li>
-                      <li>Unlimited brands</li>
-                      <li>Unlimited users</li>
-                      <li>Easy credit-card payments</li>
-                      <li>Pause or cancel anytime</li>
-                  </ul>
-                </div>
+                <ul>
+                  <li>One request at a time</li>
+                  <li>Average 36 hour delivery</li>
+                  <li>Unlimited brands</li>
+                  <li>Unlimited users</li>
+                  <li>Easy credit-card payments</li>
+                  <li>Pause or cancel anytime</li>
+                </ul>
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-stretch w-[49%] mx-5 max-md:w-full max-md:ml-0 " data-aos="zoom-in">
-            <div className="border shadow-lg backdrop-blur-[2.5px] bg-white bg-opacity-10 flex grow flex-col items-stretch w-full py-8 rounded-2xl border-solid border-white max-md:max-w-full max-md:mt-10">
-              <div className="flex flex-col pl-9 pr-12 max-md:max-w-full max-md:px-5">
-                <div className="text-black text-3xl self-stretch">
-                  <span className="font-bold text-4xl">Premium</span>
-                </div>
-                <div className="text-black text-3xl self-stretch">
-                  <span className="text-lg text-gray-400">
-                    One request at a time. Pause or cancel anytime.
-                  </span>
-                </div>
-                <div className="text-black text-4xl font-bold self-stretch mt-7">
-                  5999$/m
-                </div>
-                <div className="text-gray-400 text-lg self-stretch mt-2">
-                  Pause or Cancel anytime
-                </div>
-                <a href="https://buy.stripe.com/test_3cseVmbjRbHR4HS5kl">
-                  <div className="text-white text-center text-xl font-bold bg-black self-stretch justify-center items-center mt-6 px-16 py-7 rounded-2xl max-md:px-5">
-                    Try it
+          <div className="flex overflow-hidden flex-col justify-center p-8 border border-solid bg-neutral-900 border-neutral-800 min-w-[240px] rounded-[50px] w-[412px] max-md:px-5">
+            <div className="flex flex-col justify-center px-4 w-full">
+              <div className="flex flex-col justify-center items-start w-full">
+                <div className="flex flex-col justify-center">
+                  <div className="gap-2 self-start text-3xl font-semibold leading-snug text-center whitespace-nowrap text-neutral-200">
+                    Premium
                   </div>
-                </a>
-                <div className="text-black text-lg self-center whitespace-nowrap mt-3">
-                  Book a Call
+                  <div className="text-base leading-7 text-zinc-400">
+                    Two requests at the time
+                  </div>
+                </div>
+                <div className="flex flex-col justify-center mt-2.5">
+                  <div className="text-3xl font-semibold leading-snug bg-clip-text text-orange-500">
+                    4999$/m
+                  </div>
+                  <div className="text-base leading-7 text-zinc-400">
+                    Pause or Cancel anytime
+                  </div>
                 </div>
               </div>
-              <div className="text-black text-xl self-stretch mt-5 mb-3.5 ml-8">
-                <div>
-                  <span className="text-black text-lg font-bold">
-                    What's included:<br/>
-                  </span>
-                  <ul className="text-black text-lg font-normal list-disc pl-5">
-                      <li>One request at a time</li>
-                      <li>Average 36 hour delivery</li>
-                      <li>Unlimited brands</li>
-                      <li>Unlimited users</li>
-                      <li>Easy credit-card payments</li>
-                      <li>Pause or cancel anytime</li>
-                  </ul>
+              <div className="flex flex-col justify-center mt-2.5 w-full text-base leading-7 text-center">
+                <div className="flex flex-col justify-center w-full text-neutral-200">
+                  <a href="/checkout.html">
+                    <div className="overflow-hidden gap-3 self-stretch px-6 py-3 w-full border border-orange-500 border-solid bg-neutral-900 rounded-[50px] max-md:px-5">
+                      Buy it with paypal
+                    </div>
+                  </a>
+                  <a href="https://t.me/ontheproduct">
+                    <div className="overflow-hidden gap-3 self-stretch px-6 py-3 mt-4 w-full border border-solid bg-neutral-900 border-neutral-800 rounded-[50px] max-md:px-5">
+                      Buy it in crypto
+                    </div>
+                  </a>
                 </div>
+                <div className="self-center mt-2 bg-clip-text text-orange-500">
+                  Book a call
+                </div>
+              </div>
+              <div className="mt-2.5 text-base leading-7 text-neutral-200">
+                <span className="text-lg font-medium leading-8">
+                  What's included:
+                </span>
+                <ul>
+                  <li>One request at a time</li>
+                  <li>Average 36 hour delivery</li>
+                  <li>Unlimited brands</li>
+                  <li>Unlimited users</li>
+                  <li>Easy credit-card payments</li>
+                  <li>Pause or cancel anytime</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default PricingCard
+export default PricingCard;

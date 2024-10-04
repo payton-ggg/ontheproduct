@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://www.paypal.com/sdk/js?client-id=AQ7wzgevtMw7NNxWPywtIBD-n-l-a6r3v6hAB0qsD20JZsV132u-ir_zAxsC1krk8oOX4dxhtzKjsvY5"></script>
+  <!-- Replace YOUR_CLIENT_ID with your actual PayPal client ID -->
+  <title>PayPal Integration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <center><a href="/" style="text-decoration: none; color: black;">OnTheProduct</a></center>
+  </div>
+  <div class="body">
+  <div class="box">
+    <div class="img-center">
+      <img
+        loading="lazy"
+        srcset="https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=100 100w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=200 200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=400 400w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=800 800w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=1200 1200w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=1600 1600w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&width=2000 2000w, https://cdn.builder.io/api/v1/image/assets/TEMP/4fc7b1c97d8bc7eb87de11c50137444f75df27fa3cf75eb87adea69b96e54711?apiKey=2362306e9878458e8644eaa2dbb8fa85&"
+        class="img"
+      />
+    </div>
+    <!-- <div class="grid-rows-4">
+      <div class="columns">
+        <p class="text-center">
+          Invoice from
+        </p>
+      </div>
+      <div class="columns">
+        <p class="text-center">
+          Invoice from
+        </p>
+      </div>
+      <div class="columns">
+        <p class="text-center">
+          Invoice from
+        </p>
+      </div>
+      <div class="columns"> 
+        <p class="text-center">
+          Invoice from
+        </p>
+      </div>
+    </div> -->
+    <div>
+      <p>Per month: <b>5999$</b></p>
+    </div>
+    <div id="paypal-button-container" class="img-2"></div>
+  </div>
+  </div>
+  <script>
+    paypal.Buttons({
+      createOrder: function(data, actions) {
+        // Set up the transaction
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: '5999.00' // The amount to be paid
+            }
+          }]
+        });
+      },
+      onApprove: function(data, actions) {
+        // Capture the funds from the transaction
+        return actions.order.capture().then(function(details) {
+          // Handle the payment success
+          console.log('Payment completed:', details);
+          alert("Payment completed successfully! We'll get in touch in 3 hours!");
+        });
+      }
+    }).render('#paypal-button-container');
+  </script>  
+</body>
+</html>

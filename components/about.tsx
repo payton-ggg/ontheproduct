@@ -4,10 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 import Image from "next/image";
-import Diamond from "@/public/diamond.svg"
-import Mail from "@/public/mail.svg"
-import Clock from "@/public/clock.svg"
 
 export default function About() {
   const { ref } = useSectionInView("About");
@@ -15,88 +16,85 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="mb-28 text-center max-w-[900px] leading-8 sm:mb-40 scroll-mt-28"
+      className="text-center leading-8 sm:mb-2 scroll-mt-28 mx-10"
       id="about"
     >
-      
-      <motion.div
-        className="text-center leading-8 mb-40 scroll-mt-28 mx-3"
-      >
-        <div className="gap-5 flex max-md:flex-col-950 max-md:items-stretch max-md:gap-0">
-          <div className="flex flex-col items-stretch w-[31%] max-md:w-full-next max-md:ml-0" data-aos="fade-up">
-            <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-stretch w-full px-4 py-12 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
-              <div className="text-black text-center text-8xl font-bold self-center whitespace-nowrap max-md:text-4xl">
-                <Image 
-                    src={Mail}
-                    alt="Diamond"
-                    quality={95}
+      <div className="flex overflow-hidden flex-col">
+        <div className="flex flex-col justify-center items-center px-20 py-16 w-full bg-[linear-gradient(180deg,rgba(153,77,22,0.00_32.24%,rgba(255,129,37,0.15)_115.55%))] rounded-[50px] max-md:px-5 max-md:max-w-full">
+          <div className="flex flex-col items-center w-full max-w-[1000px] max-md:max-w-full">
+            <div className="flex flex-col justify-center items-center max-w-full text-center w-[789px]">
+              <div className="text-5xl font-medium leading-snug text-white max-md:max-w-full max-md:text-4xl">
+                Totally Efficient, Always Ahead
+              </div>
+              <div className="mt-5 text-base leading-7 text-zinc-400 w-[487px] max-md:max-w-full">
+                No more endless meetings! OnTheProduct has streamlined the
+                process for efficiency. Manage your design projects seamlessly
+                with our intuitive platform.
+              </div>
+            </div>
+            <div className="flex flex-wrap gap-7 justify-between items-start mt-12 w-full max-md:mt-10">
+              <div className="flex overflow-hidden flex-col px-8 pt-8 pb-16 border border-solid bg-neutral-900 border-neutral-800 min-h-[244px] min-w-[240px] rounded-[50px] w-[314px] max-md:px-5">
+                <div className="flex gap-2 justify-center items-start self-start text-sm tracking-widest leading-6 text-center text-orange-500">
+                  <Image
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8110d4a6d61baecd445328faa07c5e89f61203b588085d9a879b2a3cb772265e?placeholderIfAbsent=true&apiKey=2362306e9878458e8644eaa2dbb8fa85"
+                    className="object-contain shrink-0 w-6 aspect-square"
+                    alt=""
+                    width={100}
+                    height={100}
                   />
+                  <div>Completely flexible</div>
+                </div>
+                <div className="mt-2.5 text-base leading-7 text-zinc-400 text-left">
+                  Not a fan of meetings? Neither are we so we've banned them
+                  altogether.
+                </div>
               </div>
-              <div className="text-black text-center text-2xl font-bold self-center w-[243px] mt-10">
-                Subscription
+              <div className="flex overflow-hidden flex-col p-8 border border-solid bg-neutral-900 border-neutral-800 min-h-[244px] min-w-[240px] rounded-[50px] w-[314px] max-md:px-5">
+                <div className="flex gap-2 justify-center items-start self-start text-sm tracking-widest leading-6 text-center text-orange-500">
+                  <Image
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8110d4a6d61baecd445328faa07c5e89f61203b588085d9a879b2a3cb772265e?placeholderIfAbsent=true&apiKey=2362306e9878458e8644eaa2dbb8fa85"
+                    className="object-contain shrink-0 w-6 aspect-square"
+                    alt=""
+                    width={100}
+                    height={100}
+                  />
+                  <div>Organize with Trello</div>
+                </div>
+                <div className="mt-2.5 text-base leading-7 text-zinc-400 text-left text-left">
+                  Keep your design projects in check using Trello. Easily see
+                  what's in progress, queued, or done.
+                </div>
               </div>
-              <div className="text-gray-400 text-center text-base mt-5 mb-2">
-                Join a plan and feel free to ask for as many designs as you need
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0" data-aos="fade-up">
-            <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-stretch w-full px-4 py-12 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
-              <div className="text-black text-center text-8xl font-bold self-center whitespace-nowrap max-md:text-4xl">
-                <Image 
-                  src={Diamond}
-                  alt="Diamond"
-                  quality={95}
-                />
-              </div>
-              <div className="text-black text-center text-2xl font-bold self-center w-[264px] mt-10">
-                High Quality
-              </div>
-              <div className="text-gray-400 text-center text-base mt-5 mb-2">
-                We care about your satisfaction, so we'll adjust the designs until
-                it's 100% what you want
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-col items-stretch w-[31%] ml-5 max-md:w-full-next max-md-real:ml-0" data-aos="fade-up">
-            <div className="border bit-shadow bg-white bg-opacity-10 flex grow flex-col items-center w-full py-12 px-4 rounded-2xl border-solid border-white max-md:mt-4 max-md:px-5">
-              <div className="text-black text-center text-8xl font-bold whitespace-nowrap max-md:text-4xl">
-                <Image 
-                  src={Clock}
-                  alt="Clock"
-                  quality={95}
-                />
-              </div>
-              <div className="text-black text-center text-2xl font-bold self-stretch mt-10 max-md:mt-10">
-                Fast Delivery
-              </div>
-              <div className="text-gray-400 text-center text-base self-stretch mt-5 mb-2">
-                Your design will be delivered within an average of 24 hours,
-                Monday to Friday.
+              <div className="flex overflow-hidden flex-col px-8 pt-8 pb-16 border border-solid bg-neutral-900 border-neutral-800 min-h-[244px] min-w-[240px] rounded-[50px] w-[314px] max-md:px-5">
+                <div className="flex gap-2 justify-center items-start self-start text-sm tracking-widest leading-6 text-center text-orange-500">
+                  <Image
+                    loading="lazy"
+                    alt=""
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8110d4a6d61baecd445328faa07c5e89f61203b588085d9a879b2a3cb772265e?placeholderIfAbsent=true&apiKey=2362306e9878458e8644eaa2dbb8fa85"
+                    className="object-contain shrink-0 w-6 aspect-square"
+                    width={100}
+                    height={100}
+                  />
+                  <div>Bring on the whole team</div>
+                </div>
+                <div className="mt-2.5 text-base leading-7 text-zinc-400 text-left">
+                  Not a fan of meetings? Neither are we so we've banned them
+                  altogether.
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </motion.div>
-      <motion.div
-        className="mx-3"
-      >
-        <div className="h-auto bg-white bg-opacity-20 rounded-2xl bit-shadow border border-white backdrop-blur-sm tracking-tight" data-aos="fade-down">
-          <div className="max-w-[800px] pt-[30px] pl-[27px] text-left leading-[1px]">
-            <span className="text-black text-xl font-bold ">“We highly endorse </span><span className="text-blue-600 text-xl font-bold ">OnTheProduct</span><span className="text-black text-xl font-bold "> for exceptional graphic design services. Their team has consistently impressed us with their creative flair, meticulous attention to detail, and unwavering commitment to embodying our brand's vision.”</span>
-          </div>
-          <div className="text-right text-green-400 text-2xl font-bold  pb-[28px] pt-[10px] pr-[54px]">
-            <span>-Founder AinaLabs, MN Katawazy</span>
-          </div>
-        </div>
-      </motion.div>
+      </div>
     </motion.section>
   );
 }
 
 export function LogoExample() {
   return (
-    <motion.div className="mt-[-17%] mx-0">
+    <motion.div className="mx-0" data-aos="fade-up">
       <div className="bg-white opacity-20 flex items-stretch justify-between gap-5 px-5 pb-10 py-10 max-md:max-w-full w-auto max-md:flex-wrap">
         <div className="text-black text-center text-xl font-bold">
           Logo Example

@@ -5,13 +5,14 @@
 // import smoke from "/public/images/smoke_2.png";
 import sales from "@/public/sales.svg";
 import crm from "@/public/srm.svg"
+import crm1 from "@/public/crm1.svg"
 
 export const cards = [
   {
     id: 1,
     title: "",
     description: "",
-    image: sales,
+    image: crm1,
     link: "/ing",
   },
   {
@@ -27,12 +28,5 @@ export const cards = [
     description: "",
     image: sales,
     link: "/ing",
-  },
-  {
-    id: 4,
-    title: "",
-    description: "",
-    image: crm,
-    link: "/ing",
-  },
+  }
 ];

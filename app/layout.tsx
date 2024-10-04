@@ -1,11 +1,22 @@
 import Header from "@/components/header";
 import "./globals.css";
 import { Inter } from "next/font/google";
+import localfont from "next/font/local"; 
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-import { Toaster } from "react-hot-toast";
+import Image from "next/image";
+import Back from "@/app/back.svg"
+
+const druk = localfont({
+    src: [
+      {
+        path: "./fonts/Poppins-Regular.ttf",
+        weight: "400",
+      }
+    ],
+    variable: "--font-druk",
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,20 +31,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="!scroll-smooth">
+    <html lang="en" className={`${druk.variable} !scroll-smooth font-druk`}>
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36`}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 body`}
       >
-        <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[100%] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[100%] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
-
+        {/* <Image 
+          src={Back}
+          alt="Background"
+          quality={100}
+          className="body-for-bg body-for-bg:l-700"
+        /> */}
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
             {children}
             <Footer />
-            <Toaster position="top-right" />
-            <ThemeSwitch />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>

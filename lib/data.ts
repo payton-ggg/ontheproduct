@@ -1,10 +1,12 @@
 import React from "react";
+import Image from "next/image";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/dollar.png";
 import rmtdevImg from "@/public/whriting.png";
 import wordanalyticsImg from "@/public/chatting.png";
+import Onthepr from "@/app/favicon.ico"
 
 export const links = [
   {
